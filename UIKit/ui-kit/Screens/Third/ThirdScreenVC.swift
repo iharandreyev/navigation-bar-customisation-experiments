@@ -6,6 +6,23 @@ final class ThirdScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCellType(UITableViewCell.self)
+        configureNavigationItem()
+    }
+
+    private func configureNavigationItem() {
+        let navigationBarStyle = NavigationBarStyle(
+            scrollEdgeAppearance: .init(
+                titleStyle: TextStyle(font: .titleBigger, color: .textTetriary),
+                backgroundColor: .backgroundSecondary,
+                backgroundEffect: nil,
+                hasShadow: true,
+                backIndicatorImage: .backButton
+            ),
+            standardAppearance: .blurred(
+                titleStyle: TextStyle(font: .titleBigger, color: .textTetriary)
+            )
+        )
+        configureNavigationItem(with: navigationBarStyle)
     }
 }
 
