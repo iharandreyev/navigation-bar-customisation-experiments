@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct FirstScreenView: View {
+    @State private var showingAlert = false
+
     var navigationAction: ((String) -> AnyView)?
 
     var body: some View {
@@ -20,6 +22,24 @@ struct FirstScreenView: View {
         }
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(
+                    action: {
+                        showingAlert = true
+                    },
+                    label: {
+                        Image(systemName: "gear.badge.questionmark")
+                    })
+            }
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(
+                title: Text("Message"),
+                message: Text("You've clicked a navigation item"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
         .onAppear {
             UINavigationBar.configureCurrent { item in
                 item.configure(with: .first())
