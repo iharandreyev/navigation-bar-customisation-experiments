@@ -106,7 +106,7 @@
 		967537BE286DA94D00590E51 /* ui-kit */ = {
 			isa = PBXGroup;
 			children = (
-				967537EE286DAFA000590E51 /* App Delegate */,
+				967537EE286DAFA000590E51 /* App */,
 				967537F7286DBC2E00590E51 /* Common */,
 				967537EF286DAFAE00590E51 /* Resources */,
 				967537D3286DA9A500590E51 /* Screens */,
@@ -175,13 +175,13 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		967537EE286DAFA000590E51 /* App Delegate */ = {
+		967537EE286DAFA000590E51 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				967537BF286DA94D00590E51 /* AppDelegate.swift */,
 				967537C1286DA94D00590E51 /* SceneDelegate.swift */,
 			);
-			path = "App Delegate";
+			path = App;
 			sourceTree = "<group>";
 		};
 		967537EF286DAFAE00590E51 /* Resources */ = {
