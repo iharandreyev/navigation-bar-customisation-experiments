@@ -38,6 +38,7 @@
 		9675381B286DBECC00590E51 /* FirstScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381A286DBECC00590E51 /* FirstScreenFactory.swift */; };
 		9675381D286DBEDC00590E51 /* SecondScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381C286DBEDC00590E51 /* SecondScreenFactory.swift */; };
 		9675381F286DBEE900590E51 /* ThirdScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381E286DBEE900590E51 /* ThirdScreenFactory.swift */; };
+		96753893286DC6D200590E51 /* UINavigationBarAppearance+NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753892286DC6D200590E51 /* UINavigationBarAppearance+NavigationBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		9675381A286DBECC00590E51 /* FirstScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenFactory.swift; sourceTree = "<group>"; };
 		9675381C286DBEDC00590E51 /* SecondScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenFactory.swift; sourceTree = "<group>"; };
 		9675381E286DBEE900590E51 /* ThirdScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenFactory.swift; sourceTree = "<group>"; };
+		96753892286DC6D200590E51 /* UINavigationBarAppearance+NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBarAppearance+NavigationBarStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,12 +159,12 @@
 		967537E6286DAEEA00590E51 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				96753807286DBDA100590E51 /* Styling */,
-				967537E9286DAF1E00590E51 /* UIViewController+Utilities.swift */,
-				967537EC286DAF3D00590E51 /* UITableViewCell+Utilities.swift */,
-				967537F2286DB08B00590E51 /* UITableView+Utilities.swift */,
 				9675380E286DBDEA00590E51 /* UIColor+Utilities.swift */,
 				96753810286DBE0100590E51 /* UIImage+Utilities.swift */,
+				967537F2286DB08B00590E51 /* UITableView+Utilities.swift */,
+				967537EC286DAF3D00590E51 /* UITableViewCell+Utilities.swift */,
+				967537E9286DAF1E00590E51 /* UIViewController+Utilities.swift */,
+				96753807286DBDA100590E51 /* Styling */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -207,12 +209,12 @@
 		967537FA286DBD1600590E51 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
-				967537FB286DBD1600590E51 /* ColorToken.swift */,
-				967537FC286DBD1600590E51 /* NavigationBarStyle.swift */,
-				967537FD286DBD1600590E51 /* FontToken.swift */,
-				967537FE286DBD1600590E51 /* TextStyle.swift */,
 				967537FF286DBD1600590E51 /* BackgroundEffect.swift */,
+				967537FB286DBD1600590E51 /* ColorToken.swift */,
+				967537FD286DBD1600590E51 /* FontToken.swift */,
 				96753800286DBD1600590E51 /* ImageToken.swift */,
+				967537FC286DBD1600590E51 /* NavigationBarStyle.swift */,
+				967537FE286DBD1600590E51 /* TextStyle.swift */,
 			);
 			name = Styling;
 			path = ../../../Common/Styling;
@@ -221,11 +223,12 @@
 		96753807286DBDA100590E51 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
+				96753816286DBE4200590E51 /* StringAttributes+TextStyle.swift */,
+				96753814286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift */,
 				96753808286DBDAA00590E51 /* UIColor+ColorToken.swift */,
 				9675380A286DBDBF00590E51 /* UIFont+FontToken.swift */,
 				9675380C286DBDD800590E51 /* UIImage+ImageToken.swift */,
-				96753814286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift */,
-				96753816286DBE4200590E51 /* StringAttributes+TextStyle.swift */,
+				96753892286DC6D200590E51 /* UINavigationBarAppearance+NavigationBarStyle.swift */,
 				96753818286DBE5A00590E51 /* UIViewController+NavigationBarStyle.swift */,
 			);
 			path = Styling;
@@ -322,6 +325,7 @@
 				9675381D286DBEDC00590E51 /* SecondScreenFactory.swift in Sources */,
 				967537E5286DAEA000590E51 /* ThirdScreenVC.swift in Sources */,
 				967537D6286DA9B500590E51 /* FirstScreenVC.swift in Sources */,
+				96753893286DC6D200590E51 /* UINavigationBarAppearance+NavigationBarStyle.swift in Sources */,
 				96753803286DBD1600590E51 /* FontToken.swift in Sources */,
 				96753804286DBD1600590E51 /* TextStyle.swift in Sources */,
 				967537E3286DAEA000590E51 /* SecondScreenVC.swift in Sources */,
@@ -482,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iandreyeu.flo.ui-kit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.experiments.ui-kit-navigation-bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -512,7 +516,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iandreyeu.flo.ui-kit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.experiments.ui-kit-navigation-bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
