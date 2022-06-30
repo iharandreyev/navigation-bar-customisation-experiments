@@ -26,9 +26,29 @@ final class NavigationItem {
 extension NavigationItem {
     func configure(with style: NavigationBarStyle) {
         let scrollEdgeAppearance = style.scrollEdgeAppearance.map(UINavigationBarAppearance.init)
+        scrollEdgeAppearance?.backButtonAppearance.setTitleHidden()
         self.scrollEdgeAppearance = scrollEdgeAppearance
         let standardAppearance = UINavigationBarAppearance(style.standardAppearance)
+        standardAppearance.backButtonAppearance.setTitleHidden()
         self.standardAppearance = standardAppearance
         self.compactAppearance = standardAppearance
+    }
+}
+
+extension UIBarButtonItemAppearance {
+    fileprivate func setTitleHidden() {
+        normal.setTitleHidden()
+        disabled.setTitleHidden()
+        focused.setTitleHidden()
+        highlighted.setTitleHidden()
+    }
+}
+
+extension UIBarButtonItemStateAppearance {
+    fileprivate func setTitleHidden() {
+        titleTextAttributes = [
+            .font: UIFont.systemFont(ofSize: 0),
+            .foregroundColor: UIColor.clear
+        ]
     }
 }
