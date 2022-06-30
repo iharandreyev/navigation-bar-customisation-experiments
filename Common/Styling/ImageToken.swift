@@ -1,0 +1,3 @@
+enum ImageToken {
+    case backButton
+}

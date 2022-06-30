@@ -1,0 +1,3 @@
+enum BackgroundEffect {
+    case systemMaterial
+}
