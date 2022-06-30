@@ -20,6 +20,11 @@ struct FirstScreenView: View {
         }
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            UINavigationBar.configureCurrent { item in
+                item.configure(with: .first())
+            }
+        }
     }
 }
 
