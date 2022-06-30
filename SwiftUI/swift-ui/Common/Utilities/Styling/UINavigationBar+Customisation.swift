@@ -38,6 +38,7 @@ extension UINavigationBar {
         }
     }
 
+    // WARNING: Only the first ever customisation works!!!
     static func configureCurrent(_ configure: (NavigationItem) -> Void) {
         let proxy = appearance()
         let item = NavigationItem(proxy)

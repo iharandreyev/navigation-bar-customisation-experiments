@@ -21,6 +21,7 @@ struct SecondScreenView: View {
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            // Doesn't work
             UINavigationBar.configureCurrent { item in
                 item.configure(with: .second())
             }
