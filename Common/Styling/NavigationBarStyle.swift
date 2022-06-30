@@ -60,3 +60,48 @@ extension NavigationBarStyle.Appearance {
         )
     }
 }
+
+// MARK: - NavigationBarStyle + Presets
+
+extension NavigationBarStyle {
+    static func first() -> Self {
+        .init(
+            scrollEdgeAppearance: .transparent(
+                titleStyle: TextStyle(font: .titleDefault, color: .textPrimary)
+            ),
+            standardAppearance: .blurred(
+                titleStyle: TextStyle(font: .titleDefault, color: .textSecondary)
+            )
+        )
+    }
+
+    static func second() -> Self {
+        .init(
+            scrollEdgeAppearance: .init(
+                titleStyle: TextStyle(font: .titleBigger, color: .textSecondary),
+                backgroundColor: .backgroundSecondary,
+                backgroundEffect: nil,
+                hasShadow: true,
+                backIndicatorImage: .backButton
+            ),
+            standardAppearance: .blurred(
+                titleStyle: TextStyle(font: .titleBigger, color: .textTetriary)
+            )
+        )
+    }
+
+    static func third() -> Self {
+        .init(
+            scrollEdgeAppearance: .init(
+                titleStyle: TextStyle(font: .titleBigger, color: .textTetriary),
+                backgroundColor: .backgroundSecondary,
+                backgroundEffect: nil,
+                hasShadow: true,
+                backIndicatorImage: .backButton
+            ),
+            standardAppearance: .blurred(
+                titleStyle: TextStyle(font: .titleBigger, color: .textSecondary)
+            )
+        )
+    }
+}
