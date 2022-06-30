@@ -25,7 +25,7 @@ extension UINavigationBar {
         set { setAssociatedObject(newValue, forKey: &Keys.compactAppearance) }
     }
 
-    static func configureCurrent(_ configure: (NavigationItem) -> Void) {
+    static func persistDefaultConfig() {
         let proxy = appearance()
         if case .neverSet = proxy.defaultScrollEdgeAppearance {
             proxy.defaultScrollEdgeAppearance = .set(proxy.scrollEdgeAppearance)
@@ -36,6 +36,10 @@ extension UINavigationBar {
         if case .neverSet = proxy.defaultCompactAppearance {
             proxy.defaultCompactAppearance = .set(proxy.compactAppearance)
         }
+    }
+
+    static func configureCurrent(_ configure: (NavigationItem) -> Void) {
+        let proxy = appearance()
         let item = NavigationItem(proxy)
         configure(item)
     }
