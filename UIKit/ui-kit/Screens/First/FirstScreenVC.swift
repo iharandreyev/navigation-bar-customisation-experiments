@@ -8,16 +8,7 @@ final class FirstScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCellType(UITableViewCell.self)
-        configureNavigationItem()
-    }
-
-    private func configureNavigationItem() {
-        let titleStyle = TextStyle(font: .titleDefault, color: .textPrimary)
-        let navigationBarStyle = NavigationBarStyle(
-            scrollEdgeAppearance: .transparent(titleStyle: titleStyle),
-            standardAppearance: .blurred(titleStyle: titleStyle)
-        )
-        configureNavigationItem(with: navigationBarStyle)
+        configureNavigationItem(with: .first())
     }
 }
 
