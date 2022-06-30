@@ -5,10 +5,39 @@ final class FirstScreenVC: UIViewController {
 
     var navigationAction: ((String) -> Void)?
 
+    private var navigationBarStyle: NavigationBarStyle {
+        .first()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCellType(UITableViewCell.self)
-        configureNavigationItem(with: .first())
+        configureNavigationItem(with: navigationBarStyle)
+        navigationItem.rightBarButtonItems = [
+            createMessageItem()
+        ]
+    }
+
+    private func createMessageItem() -> UIBarButtonItem {
+        let item = UIBarButtonItem(
+            image: UIImage(systemName: "gear.badge.questionmark"),
+            style: .plain,
+            target: self,
+            action: #selector(showMessage)
+        )
+        item.tintColor = .with(token: navigationBarStyle.standardAppearance.titleStyle.color)
+        return item
+    }
+
+    @objc
+    private func showMessage() {
+        let alert = UIAlertController(
+            title: "Message",
+            message: "You've clicked a navigation item",
+            preferredStyle: .alert
+        )
+        alert.addAction(.init(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
 
