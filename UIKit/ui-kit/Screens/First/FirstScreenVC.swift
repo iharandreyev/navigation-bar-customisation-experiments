@@ -46,35 +46,3 @@ extension FirstScreenVC: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-enum FirstScreenFactory {
-    static func createViewController() -> FirstScreenVC {
-        let viewController = FirstScreenVC(fromPreferredNib: ())
-        viewController.title = "First"
-        viewController.navigationAction = { [weak viewController] context in
-            let next = SecondScreenFactory.createViewController(title: context)
-            viewController?.show(next, sender: nil)
-        }
-        return viewController
-    }
-}
-
-enum SecondScreenFactory {
-    static func createViewController(title: String) -> SecondScreenVC {
-        let viewController = SecondScreenVC(fromPreferredNib: ())
-        viewController.title = "Second [\(title)]"
-        viewController.navigationAction = { [weak viewController] context in
-            let next = ThirdScreenFactory.createViewController(title: "\(title)->\(context)")
-            viewController?.show(next, sender: nil)
-        }
-        return viewController
-    }
-}
-
-enum ThirdScreenFactory {
-    static func createViewController(title: String) -> ThirdScreenVC {
-        let viewController = ThirdScreenVC(fromPreferredNib: ())
-        viewController.title = "Third [\(title)]"
-        return viewController
-    }
-}

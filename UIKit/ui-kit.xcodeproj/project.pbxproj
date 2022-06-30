@@ -35,6 +35,9 @@
 		96753815286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753814286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift */; };
 		96753817286DBE4200590E51 /* StringAttributes+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753816286DBE4200590E51 /* StringAttributes+TextStyle.swift */; };
 		96753819286DBE5A00590E51 /* UIViewController+NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753818286DBE5A00590E51 /* UIViewController+NavigationBarStyle.swift */; };
+		9675381B286DBECC00590E51 /* FirstScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381A286DBECC00590E51 /* FirstScreenFactory.swift */; };
+		9675381D286DBEDC00590E51 /* SecondScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381C286DBEDC00590E51 /* SecondScreenFactory.swift */; };
+		9675381F286DBEE900590E51 /* ThirdScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9675381E286DBEE900590E51 /* ThirdScreenFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		96753814286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBlurEffect+BackgroundEffect.swift"; sourceTree = "<group>"; };
 		96753816286DBE4200590E51 /* StringAttributes+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringAttributes+TextStyle.swift"; sourceTree = "<group>"; };
 		96753818286DBE5A00590E51 /* UIViewController+NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarStyle.swift"; sourceTree = "<group>"; };
+		9675381A286DBECC00590E51 /* FirstScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenFactory.swift; sourceTree = "<group>"; };
+		9675381C286DBEDC00590E51 /* SecondScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenFactory.swift; sourceTree = "<group>"; };
+		9675381E286DBEE900590E51 /* ThirdScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		967537D4286DA9AA00590E51 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				9675381A286DBECC00590E51 /* FirstScreenFactory.swift */,
 				967537D5286DA9B500590E51 /* FirstScreenVC.swift */,
 				967537D7286DAA4F00590E51 /* FirstScreenVC.xib */,
 			);
@@ -130,6 +137,7 @@
 		967537DC286DAEA000590E51 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				9675381C286DBEDC00590E51 /* SecondScreenFactory.swift */,
 				967537DE286DAEA000590E51 /* SecondScreenVC.swift */,
 				967537DD286DAEA000590E51 /* SecondScreenVC.xib */,
 			);
@@ -139,6 +147,7 @@
 		967537DF286DAEA000590E51 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				9675381E286DBEE900590E51 /* ThirdScreenFactory.swift */,
 				967537E1286DAEA000590E51 /* ThirdScreenVC.swift */,
 				967537E0286DAEA000590E51 /* ThirdScreenVC.xib */,
 			);
@@ -298,6 +307,7 @@
 				9675380D286DBDD800590E51 /* UIImage+ImageToken.swift in Sources */,
 				96753801286DBD1600590E51 /* ColorToken.swift in Sources */,
 				96753802286DBD1600590E51 /* NavigationBarStyle.swift in Sources */,
+				9675381B286DBECC00590E51 /* FirstScreenFactory.swift in Sources */,
 				967537E8286DAEF300590E51 /* Reusable.swift in Sources */,
 				96753815286DBE2C00590E51 /* UIBlurEffect+BackgroundEffect.swift in Sources */,
 				967537C0286DA94D00590E51 /* AppDelegate.swift in Sources */,
@@ -309,12 +319,14 @@
 				96753805286DBD1600590E51 /* BackgroundEffect.swift in Sources */,
 				967537C2286DA94D00590E51 /* SceneDelegate.swift in Sources */,
 				9675380F286DBDEA00590E51 /* UIColor+Utilities.swift in Sources */,
+				9675381D286DBEDC00590E51 /* SecondScreenFactory.swift in Sources */,
 				967537E5286DAEA000590E51 /* ThirdScreenVC.swift in Sources */,
 				967537D6286DA9B500590E51 /* FirstScreenVC.swift in Sources */,
 				96753803286DBD1600590E51 /* FontToken.swift in Sources */,
 				96753804286DBD1600590E51 /* TextStyle.swift in Sources */,
 				967537E3286DAEA000590E51 /* SecondScreenVC.swift in Sources */,
 				96753809286DBDAA00590E51 /* UIColor+ColorToken.swift in Sources */,
+				9675381F286DBEE900590E51 /* ThirdScreenFactory.swift in Sources */,
 				96753817286DBE4200590E51 /* StringAttributes+TextStyle.swift in Sources */,
 				967537EA286DAF1E00590E51 /* UIViewController+Utilities.swift in Sources */,
 				96753806286DBD1600590E51 /* ImageToken.swift in Sources */,
